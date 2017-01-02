@@ -1,0 +1,5 @@
+[khara-nodejs]
+name=Copr repo for nodejs owned by khara
+baseurl=https://copr-be.cloud.fedoraproject.org/results/khara/nodejs/epel-7-$basearch/
+gpgcheck=0
+enabled=1
