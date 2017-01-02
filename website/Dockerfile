@@ -16,4 +16,4 @@ VOLUME /var/conf
 
 EXPOSE 80
 
-# 最后执行 docker run -d -p 80:80 --name website -v /var/blog:/var/blog:ro -v /var/conf:/var/conf:ro whatsarchit/website:test nginx -c /var/conf/nginx.conf -g "daemon off;"
+# 最后执行 docker run -d -p 80:80 --name website -v /var/blog:/var/blog:ro -v /var/conf:/var/conf:ro whatsarchit/website:latest nginx -c /var/conf/nginx.conf -g "daemon off;"
