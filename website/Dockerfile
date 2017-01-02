@@ -14,8 +14,9 @@ RUN yum install -y nginx
 ADD nginx.conf /etc/nginx/nginx.conf
 
 #增加数据卷
-#VOLUME /var/blog
+VOLUME /var/blog
+VOLUME /var/conf
 
 EXPOSE 80
 
-# 最后执行 docker run -d -p 80:80 --name website -v /var/blog:/var/blog:ro whatsarchit/website:test nginx -g "daemon off;"
+# 最后执行 docker run -d -p 80:80 --name website -v /var/blog:/var/blog:ro -v /var/conf:/var/conf:ro whatsarchit/website:test nginx -c /var/conf/nginx.conf -g "daemon off;"
