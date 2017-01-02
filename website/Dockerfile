@@ -10,9 +10,6 @@ RUN yum makecache
 #安装nignx
 RUN yum install -y nginx
 
-#增加nginx配置文件
-ADD nginx.conf /etc/nginx/nginx.conf
-
 #增加数据卷
 VOLUME /var/blog
 VOLUME /var/conf
