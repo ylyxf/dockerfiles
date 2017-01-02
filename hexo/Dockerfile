@@ -40,5 +40,6 @@ VOLUME /var/blog
 #设置工作目录
 WORKDIR /opt/blog/
 EXPOSE 8000
+ENTRYPOINT ["/usr/bin/python","-m","CGIHTTPServer"]
 
-# 最后执行 docker run -d -p 8000:8000  -v /var/blog:/var/blog --name hexo whatsarchit/hexo python -m CGIHTTPServer
+# 最后执行 docker run -d -p 8000:8000  -v /var/blog:/var/blog --name hexo whatsarchit/hexo
